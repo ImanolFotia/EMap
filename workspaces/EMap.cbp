@@ -8,11 +8,13 @@
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/EMap" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Debug/" />
+				<Option working_dir="../bin/Debug" />
+				<Option object_output="../obj/Debug" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="../include" />
 					<Add directory="../../Epsilon/thirdparty/assimp--3.0.1270-sdk/include" />
 				</Compiler>
 				<Linker>
@@ -36,10 +38,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="EMapDefs.h" />
-		<Unit filename="RawParser.cpp" />
-		<Unit filename="RawParser.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="../include/EMapDefs.h" />
+		<Unit filename="../include/RawParser.h" />
+		<Unit filename="../src/RawParser.cpp" />
+		<Unit filename="../src/main.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

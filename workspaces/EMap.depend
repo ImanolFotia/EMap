@@ -1,15 +1,11 @@
 # depslib dependency file v1.0
-1429402236 source:c:\users\psycho\documents\emap\emap\main.cpp
-	<iostream>
-
-1429402236 source:c:\users\psycho\documents\emap\emap\src\main.cpp
-	<iostream>
-
-1429409158 source:c:\users\psycho\documents\emap\emap\src\rawparser.cpp
+1429422869 source:c:\users\psycho\documents\emap\src\rawparser.cpp
 	<RawParser.h>
 
-1429409442 c:\users\psycho\documents\emap\emap\include\rawparser.h
+1429419421 c:\users\psycho\documents\emap\include\rawparser.h
 	<vector>
+	<string>
+	<iostream>
 	<assimp/cimport.h>
 	<assimp/scene.h>
 	<assimp/postprocess.h>
@@ -135,23 +131,9 @@
 1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\postprocess.h
 	"types.h"
 
-1429409442 c:\users\psycho\documents\emap\emap\include\emapdefs.h
-
-1429419737 source:c:\users\psycho\documents\emap\src\main.cpp
-	<iostream>
-	<RawParser.h>
-
-1429419361 source:c:\users\psycho\documents\emap\src\rawparser.cpp
-	<RawParser.h>
-
-1429419421 c:\users\psycho\documents\emap\include\rawparser.h
-	<vector>
-	<string>
-	<iostream>
-	<assimp/cimport.h>
-	<assimp/scene.h>
-	<assimp/postprocess.h>
-	<EMapDefs.h>
-
 1429419051 c:\users\psycho\documents\emap\include\emapdefs.h
+
+1429423009 source:c:\users\psycho\documents\emap\src\main.cpp
+	<iostream>
+	<RawParser.h>
 

@@ -27,8 +27,9 @@ THE SOFTWARE.
 #include <RawParser.h>
 using namespace std;
 
-int main()
+int main(int argc, char* argv[])
 {
-    EMap eMap("nanosuit.dae");
+    //std::string filename(argv[1]);
+    EMap eMap("fy_snow.dae");
     return 0;
 }

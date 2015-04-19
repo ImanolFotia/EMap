@@ -91,16 +91,13 @@ private:
 
 };
 
-class CollParser
+class EMap
 {
 public:
-    CollParser();
-    virtual ~CollParser(){}
+    EMap(const char*);
+    virtual ~EMap(){}
 
-public:
-    UINT NumMeshes;
-    UINT NumLights;
-
+    UINT eMapNumMeshes;
 private:
     std::vector<Mesh> Meshes;
 

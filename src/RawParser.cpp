@@ -24,3 +24,60 @@ THE SOFTWARE.
 
 =============================================================================*/
 #include <RawParser.h>
+
+EMap::EMap(const char* MapName)
+{
+    const aiScene* eMap = aiImportFile(MapName,
+                                       aiProcess_CalcTangentSpace       |
+                                       aiProcess_Triangulate            |
+                                       aiProcess_SortByPType);
+
+    if(!scene)
+    {
+        std::cout << "An error has occurred, aborting." << std::endl;
+        return;
+    }
+
+    if(eMap.HasMeshes())
+    {
+        eMapNumMeshes = eMap.mNumMeshes;
+        Meshes.reserve(eMapNumMeshes);
+    }
+
+
+
+    for(int i = 0; i < eMapNumMeshes ; i++)
+    {
+
+        const struct aiMesh* mesh = eMap->mMeshes[i];
+
+        Mesh* tmpMesh = new Mesh();
+
+        tmpMesh->mNumVertices = mesh->mNumVertices;
+
+        for(int nVert = 0 ; nVert < mesh->mNumVertices; i++)
+        {
+            aiVector3D pos = mesh.mVertices[nVert];
+            VECTOR3D tmpvec3;
+            tmpvec3.x = pos.x;
+            tmpvec3.y = pos.y;
+            tmpvec3.z = pos.z;
+            tmpMesh->vPosition.push_back(tmpvec3);
+        }
+
+        if(mesh->HasTextureCoords())
+        {
+            for(int nVert = 0 ; nVert < mesh->mNumVertices; i++)
+            {
+                aiVector2D txc = mesh.mTextureCoords[nVert];
+                VECTOR2D tmpvec2;
+                tmpvec2.x = pos.x;
+                tmpvec2.y = pos.y;
+                tmpMesh->TexCoords.push_back(tmpvec2);
+            }
+        }
+
+
+    }
+}
+

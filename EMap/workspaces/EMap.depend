@@ -1,0 +1,139 @@
+# depslib dependency file v1.0
+1429402236 source:c:\users\psycho\documents\emap\emap\main.cpp
+	<iostream>
+
+1429402236 source:c:\users\psycho\documents\emap\emap\src\main.cpp
+	<iostream>
+
+1429409158 source:c:\users\psycho\documents\emap\emap\src\rawparser.cpp
+	<RawParser.h>
+
+1429409442 c:\users\psycho\documents\emap\emap\include\rawparser.h
+	<vector>
+	<assimp/cimport.h>
+	<assimp/scene.h>
+	<assimp/postprocess.h>
+	<EMapDefs.h>
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\cimport.h
+	"types.h"
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\types.h
+	<sys/types.h>
+	<memory.h>
+	<math.h>
+	<stddef.h>
+	"defs.h"
+	"vector3.h"
+	"vector2.h"
+	"color4.h"
+	"matrix3x3.h"
+	"matrix4x4.h"
+	"quaternion.h"
+	<new>
+	<string>
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+	"vector2.inl"
+	"vector3.inl"
+	"color4.inl"
+	"quaternion.inl"
+	"matrix3x3.inl"
+	"matrix4x4.inl"
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\defs.h
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\vector3.h
+	<math.h>
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\compiler\pushpack1.h
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\compiler\poppack1.h
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\vector2.h
+	<math.h>
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\color4.h
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\matrix3x3.h
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\matrix4x4.h
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\quaternion.h
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\vector2.inl
+	"vector2.h"
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\vector3.inl
+	"vector3.h"
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\color4.inl
+	"color4.h"
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\quaternion.inl
+	"quaternion.h"
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\matrix3x3.inl
+	"matrix3x3.h"
+	"matrix4x4.h"
+	<algorithm>
+	<limits>
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\matrix4x4.inl
+	"matrix4x4.h"
+	"matrix3x3.h"
+	"quaternion.h"
+	<algorithm>
+	<limits>
+	<math.h>
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\scene.h
+	"types.h"
+	"texture.h"
+	"mesh.h"
+	"light.h"
+	"camera.h"
+	"material.h"
+	"anim.h"
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\texture.h
+	"types.h"
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\mesh.h
+	"types.h"
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\light.h
+	"types.h"
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\camera.h
+	"types.h"
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\material.h
+	"types.h"
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+	"material.inl"
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\material.inl
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\anim.h
+	"types.h"
+	"quaternion.h"
+
+1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\postprocess.h
+	"types.h"
+
+1429409442 c:\users\psycho\documents\emap\emap\include\emapdefs.h
+

@@ -50,6 +50,21 @@ public:
     std::string eName;
 };
 
+class Light{
+
+public:
+    Light();
+    ~Light(){}
+
+public:
+
+    UINT lType;
+
+    VECTOR3D lPosition;
+    VECTOR3D lDirection;
+
+};
+
 class Mesh{
 
 public:

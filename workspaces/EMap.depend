@@ -137,3 +137,18 @@
 
 1429409442 c:\users\psycho\documents\emap\emap\include\emapdefs.h
 
+1429409980 source:c:\users\psycho\documents\emap\src\main.cpp
+	<iostream>
+
+1429409980 source:c:\users\psycho\documents\emap\src\rawparser.cpp
+	<RawParser.h>
+
+1429409980 c:\users\psycho\documents\emap\include\rawparser.h
+	<vector>
+	<assimp/cimport.h>
+	<assimp/scene.h>
+	<assimp/postprocess.h>
+	<EMapDefs.h>
+
+1429409980 c:\users\psycho\documents\emap\include\emapdefs.h
+

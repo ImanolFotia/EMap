@@ -80,7 +80,7 @@ public:
     std::vector<VECTOR3D> vBitangents;
     std::vector<VECTOR3D> Indices;
 
-    std::string Texture;
+    std::vector<TEXTURE> Textures;
 
 public:
 
@@ -100,7 +100,8 @@ public:
     UINT eMapNumMeshes;
 private:
     std::vector<Mesh> Meshes;
-
+    void processNode(aiNode* node, const aiScene* scene);
+    void ParseMesh(aiMesh* mesh, const aiScene eMap)
 };
 
 }

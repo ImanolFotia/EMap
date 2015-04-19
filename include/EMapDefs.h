@@ -69,5 +69,11 @@ struct VECTOR2D
     int y;
 };
 
+struct TEXTURE{
+
+    UINT ID;
+    std::string PATH;
+    std::string TYPE;
+};
 
 #endif // EMAPDEFS_H_INCLUDED

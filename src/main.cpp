@@ -24,11 +24,11 @@ THE SOFTWARE.
 
 =============================================================================*/
 #include <iostream>
-
+#include <RawParser.h>
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    EMap eMap("mapa.dae");
     return 0;
 }

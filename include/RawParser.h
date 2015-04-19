@@ -27,6 +27,8 @@ THE SOFTWARE.
 #define RAWPARSER_H_INCLUDED
 
 #include <vector>
+#include <string>
+#include <iostream>
 
 #include <assimp/cimport.h>
 #include <assimp/scene.h>
@@ -34,7 +36,6 @@ THE SOFTWARE.
 
 #include <EMapDefs.h>
 
-namespace EMap{
 
 class Entity{
 
@@ -68,24 +69,15 @@ public:
 class Mesh{
 
 public:
-    Mesh();
-    virtual ~Mesh(){}
-
-public:
 
     std::vector<VECTOR3D> vPosition;
     std::vector<VECTOR2D> TexCoords;
     std::vector<VECTOR3D> vNormals;
     std::vector<VECTOR3D> vTangents;
     std::vector<VECTOR3D> vBitangents;
-    std::vector<VECTOR3D> Indices;
+    std::vector<UINT> Indices;
 
     std::vector<TEXTURE> Textures;
-
-public:
-
-    UINT mNumVertices;
-    UINT mNumIndices;
 
 private:
 
@@ -94,15 +86,17 @@ private:
 class EMap
 {
 public:
-    EMap(const char*);
+    EMap(std::string MapName);
     virtual ~EMap(){}
 
     UINT eMapNumMeshes;
 private:
     std::vector<Mesh> Meshes;
     void processNode(aiNode* node, const aiScene* scene);
-    void ParseMesh(aiMesh* mesh, const aiScene eMap)
+    Mesh ParseMesh(aiMesh* mesh, const aiScene* eMap);
+    std::vector<TEXTURE> loadMaterialTextures(aiMaterial* mat, aiTextureType type, std::string typeName);
+    std::string directory;
 };
 
-}
+
 #endif // RAWPARSER_H_INCLUDED

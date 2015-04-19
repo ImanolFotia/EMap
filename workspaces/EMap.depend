@@ -140,15 +140,17 @@
 1429409980 source:c:\users\psycho\documents\emap\src\main.cpp
 	<iostream>
 
-1429409980 source:c:\users\psycho\documents\emap\src\rawparser.cpp
+1429419361 source:c:\users\psycho\documents\emap\src\rawparser.cpp
 	<RawParser.h>
 
-1429409980 c:\users\psycho\documents\emap\include\rawparser.h
+1429419421 c:\users\psycho\documents\emap\include\rawparser.h
 	<vector>
+	<string>
+	<iostream>
 	<assimp/cimport.h>
 	<assimp/scene.h>
 	<assimp/postprocess.h>
 	<EMapDefs.h>
 
-1429409980 c:\users\psycho\documents\emap\include\emapdefs.h
+1429419051 c:\users\psycho\documents\emap\include\emapdefs.h
 

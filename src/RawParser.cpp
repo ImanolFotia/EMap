@@ -25,14 +25,15 @@ THE SOFTWARE.
 =============================================================================*/
 #include <RawParser.h>
 
-EMap::EMap(const char* MapName)
+
+EMap::EMap(std::string MapName)
 {
-    const aiScene* eMap = aiImportFile(MapName,
+    const aiScene* eMap = aiImportFile(MapName.c_str(),
                                        aiProcess_CalcTangentSpace       |
                                        aiProcess_Triangulate            |
                                        aiProcess_SortByPType);
 
-    if(!scene)
+    if(!eMap)
     {
         std::cout << "An error has occurred, aborting." << std::endl;
         return;
@@ -43,95 +44,110 @@ EMap::EMap(const char* MapName)
     processNode(eMap->mRootNode, eMap);
 }
 
-void EMap::ParseMesh(aiMesh* mesh, const aiScene eMap)
+Mesh EMap::ParseMesh(aiMesh* mesh, const aiScene* eMap)
 {
-    if(eMap.HasMeshes())
-    {
-        eMapNumMeshes = eMap.mNumMeshes;
-        Meshes.reserve(eMapNumMeshes);
+    Mesh tmpMesh;
 
-        Mesh* tmpMesh = new Mesh();
 
-        tmpMesh->mNumVertices = mesh->mNumVertices;
-
-        for(int nVert = 0 ; nVert < mesh->mNumVertices; i++)
+        for(int nVert = 0 ; nVert < mesh->mNumVertices; nVert++)
         {
-            aiVector3D pos = mesh.mVertices[nVert];
+            aiVector3D pos = mesh->mVertices[nVert];
             VECTOR3D tmpvec3;
             tmpvec3.x = pos.x;
             tmpvec3.y = pos.y;
             tmpvec3.z = pos.z;
-            tmpMesh->vPosition.push_back(tmpvec3);
-        }
+            tmpMesh.vPosition.push_back(tmpvec3);
 
-        if(mesh->HasTextureCoords())
-        {
-            for(int nVert = 0 ; nVert < mesh->mNumVertices; i++)
+
+            if(mesh->mTextureCoords[0])
             {
-                aiVector2D txc = mesh.mTextureCoords[nVert];
+
                 VECTOR2D tmpvec2;
-                tmpvec2.x = txc.x;
-                tmpvec2.y = txc.y;
-                tmpMesh->TexCoords.push_back(tmpvec2);
-            }
-        }
+                tmpvec2.x = mesh->mTextureCoords[0][nVert].x;
+                tmpvec2.y = mesh->mTextureCoords[0][nVert].y;
+                tmpMesh.TexCoords.push_back(tmpvec2);
 
-        if(mesh->HasNormals())
-        {
-            for(int nVert = 0 ; nVert < mesh->mNumVertices; i++)
+            }
+
+            if(mesh->HasNormals())
             {
-                aiVector2D nor = mesh.mNormals[nVert];
+
+                aiVector3D nor = mesh->mNormals[nVert];
                 VECTOR3D tmpvec3;
                 tmpvec3.x = nor.x;
                 tmpvec3.y = nor.y;
                 tmpvec3.z = nor.z;
-                tmpMesh->vNormals.push_back(tmpvec3);
-            }
-        }
+                tmpMesh.vNormals.push_back(tmpvec3);
 
-        if(mesh->HasTangentsAndBitangents())
-        {
-            for(int nVert = 0 ; nVert < mesh->mNumVertices; i++)
+            }
+
+            if(mesh->HasTangentsAndBitangents())
             {
-                aiVector2D tan = mesh.mTangents[nVert];
-                aiVector2D btan = mesh.mBitangents[nVert];
+
+                aiVector3D tan = mesh->mTangents[nVert];
+                aiVector3D btan = mesh->mBitangents[nVert];
                 VECTOR3D tmpvec3;
                 tmpvec3.x = tan.x;
                 tmpvec3.y = tan.y;
                 tmpvec3.z = tan.z;
-                tmpMesh->vTangents.push_back(tmpvec3);
+                tmpMesh.vTangents.push_back(tmpvec3);
                 tmpvec3.x = btan.x;
                 tmpvec3.y = btan.y;
                 tmpvec3.z = btan.z;
-                tmpMesh->vBitangents.push_back(tmpvec3);
+                tmpMesh.vBitangents.push_back(tmpvec3);
+
             }
         }
-        eMap
+        for(UINT i = 0; i < mesh->mNumFaces; i++)
+        {
+            aiFace face = mesh->mFaces[i];
+            // Retrieve all indices of the face and store them in the indices vector
+            for(UINT j = 0; j < face.mNumIndices; j++)
+                tmpMesh.Indices.push_back(face.mIndices[j]);
+        }
+        if(mesh->mMaterialIndex >= 0)
+        {
+            aiMaterial* material = eMap->mMaterials[mesh->mMaterialIndex];
+            std::vector<TEXTURE> diffuseMaps = this->loadMaterialTextures(material,
+                                          aiTextureType_DIFFUSE, "texture_diffuse");
+            tmpMesh.Textures.insert(tmpMesh.Textures.end(), diffuseMaps.begin(), diffuseMaps.end());
+            std::vector<TEXTURE> specularMaps = this->loadMaterialTextures(material,
+                                           aiTextureType_SPECULAR, "texture_specular");
+            tmpMesh.Textures.insert(tmpMesh.Textures.end(), specularMaps.begin(), specularMaps.end());
+        }
 
-        delete tmpMesh;
-
-        if(eMap->HasTextures())
 
 
-            const aiMaterial* mmat = eMap->mMaterials[0];
-
-        mmat->GetTexture()
-
-
-    }
+    return tmpMesh;
 }
 
 void EMap::processNode(aiNode* node, const aiScene* scene)
 {
     // Process all the node's meshes (if any)
-    for(GLuint i = 0; i < node->mNumMeshes; i++)
+    for(UINT i = 0; i < node->mNumMeshes; i++)
     {
         aiMesh* mesh = scene->mMeshes[node->mMeshes[i]];
-        this->Meshes.push_back(this->processMesh(mesh, scene));
+        this->Meshes.push_back(this->ParseMesh(mesh, scene));
     }
     // Then do the same for each of its children
-    for(GLuint i = 0; i < node->mNumChildren; i++)
+    for(UINT i = 0; i < node->mNumChildren; i++)
     {
         this->processNode(node->mChildren[i], scene);
     }
 }
+
+std::vector<TEXTURE> EMap::loadMaterialTextures(aiMaterial* mat, aiTextureType type, std::string typeName)
+{
+    std::vector<TEXTURE> textures;
+    for(UINT i = 0; i < mat->GetTextureCount(type); i++)
+    {
+        aiString str;
+        mat->GetTexture(type, i, &str);
+        TEXTURE texture;
+        texture.TYPE = typeName;
+        texture.PATH = str.C_Str();
+        textures.push_back(texture);
+    }
+    return textures;
+}
+

@@ -71,7 +71,6 @@ struct VECTOR2D
 
 struct TEXTURE{
 
-    UINT ID;
     std::string PATH;
     std::string TYPE;
 };

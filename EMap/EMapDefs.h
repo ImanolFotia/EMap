@@ -29,41 +29,44 @@ THE SOFTWARE.
 typedef char BYTE;
 typedef unsigned int UINT;
 
-template <typename ELEMENT>
 typedef enum meshType
 {
 
-    ELEMENT ENTITY      =              0x00000001;
-    ELEMENT MESH        =              0x00000010;
-    ELEMENT MODEL       =              0x00000011;
+    ENTITY      =              0x00000001,
+    MESH        =              0x00000010,
+    MODEL       =              0x00000011,
 
 };
 
-template <typename ENTITY>
 typedef enum ENTITIES
 {
-    ENTITY LIGHT        =              0x00000100;
-    ENTITY INFO_PLAYER  =              0x00000101;
-    ENTITY SOUND        =              0x00000110;
-    ENTITY TRIGGER      =              0x00000111;
-    ENTITY
+    LIGHT        =              0x00000100,
+    INFO_PLAYER  =              0x00000101,
+    SOUND        =              0x00000110,
+    TRIGGER      =              0x00000111,
+    SMOKE        =              0x00001000
 
 };
 
-template <typename T>
-typedef struct VECTOR3D
+typedef enum LIGHT
 {
 
-    T x;
-    T y;
-    T z;
+     POINT,
+     DIRECTIONAL,
+     SPOTLIGHT
 };
 
-template <typename T>
-typedef struct VECTOR2D
+struct VECTOR3D
 {
-    T x;
-    T y;
+    int x;
+    int y;
+    int z;
+};
+
+struct VECTOR2D
+{
+    int x;
+    int y;
 };
 
 

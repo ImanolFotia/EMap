@@ -36,23 +36,6 @@ THE SOFTWARE.
 
 namespace EMap{
 
-class CollParser
-{
-public:
-    CollParser();
-    virtual ~CollParser(){}
-
-public:
-    std::vector<Mesh> getMeshCollection();
-
-public:
-    int NumMeshes;
-    int NumLights;
-
-private:
-    std::vector<Mesh> Meshes;
-
-};
 
 class Mesh{
 
@@ -71,9 +54,29 @@ public:
 
     std::string Texture;
 
+public:
 
+    UINT mNumVertices;
+    UINT mNumIndices;
 
+private:
 
 };
+
+class CollParser
+{
+public:
+    CollParser();
+    virtual ~CollParser(){}
+
+public:
+    UINT NumMeshes;
+    UINT NumLights;
+
+private:
+    std::vector<Mesh> Meshes;
+
+};
+
 }
 #endif // RAWPARSER_H_INCLUDED

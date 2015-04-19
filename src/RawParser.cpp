@@ -127,13 +127,12 @@ Mesh EMap::ParseMesh(aiMesh* mesh, const aiScene* eMap)
 void EMap::processNode(aiNode* node, const aiScene* scene)
 {
 
-    // Process all the node's meshes (if any)
     for(UINT j = 0; j < node->mNumMeshes; j++)
     {
         aiMesh* mesh = scene->mMeshes[node->mMeshes[j]];
         this->Meshes.push_back(this->ParseMesh(mesh, scene));
     }
-    // Then do the same for each of its children
+
     for(UINT i = 0; i < node->mNumChildren; i++)
     {
         this->processNode(node->mChildren[i], scene);

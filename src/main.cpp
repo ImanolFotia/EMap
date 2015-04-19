@@ -29,6 +29,6 @@ using namespace std;
 
 int main()
 {
-    EMap eMap("mapa.dae");
+    EMap eMap("nanosuit.dae");
     return 0;
 }

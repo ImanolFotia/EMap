@@ -48,6 +48,9 @@ Mesh EMap::ParseMesh(aiMesh* mesh, const aiScene* eMap)
 {
     Mesh tmpMesh;
 
+    std::cout << std::endl << "Mesh" << std::endl << "====================================" << std::endl;
+
+    std::cout << "Number of Vertices: " << mesh->mNumVertices << std::endl;
 
         for(int nVert = 0 ; nVert < mesh->mNumVertices; nVert++)
         {
@@ -123,10 +126,11 @@ Mesh EMap::ParseMesh(aiMesh* mesh, const aiScene* eMap)
 
 void EMap::processNode(aiNode* node, const aiScene* scene)
 {
+
     // Process all the node's meshes (if any)
-    for(UINT i = 0; i < node->mNumMeshes; i++)
+    for(UINT j = 0; j < node->mNumMeshes; j++)
     {
-        aiMesh* mesh = scene->mMeshes[node->mMeshes[i]];
+        aiMesh* mesh = scene->mMeshes[node->mMeshes[j]];
         this->Meshes.push_back(this->ParseMesh(mesh, scene));
     }
     // Then do the same for each of its children
@@ -145,7 +149,9 @@ std::vector<TEXTURE> EMap::loadMaterialTextures(aiMaterial* mat, aiTextureType t
         mat->GetTexture(type, i, &str);
         TEXTURE texture;
         texture.TYPE = typeName;
+        std::cout << "Texture Type: " << texture.TYPE << std::endl;
         texture.PATH = str.C_Str();
+        std::cout << "Texture Name: " << texture.PATH << std::endl;
         textures.push_back(texture);
     }
     return textures;

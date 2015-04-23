@@ -42,18 +42,65 @@ EMap::EMap(std::string MapName)
 
     directory = MapName.substr(0, MapName.find_last_of('/'));
 
+    std::cout << eMap->mLights[1]->mPosition.x<< std::endl;
+
     processNode(eMap->mRootNode, eMap);
+
+    getLights(eMap);
 
     aiReleaseImport( eMap);
 }
 
+void EMap::getLights(const aiScene* eMap)
+{
+
+    if(eMap->HasLights())
+    {
+        for(int i = 0; i < eMap->mNumLights ; i++)
+        {
+
+            aiLight* light = eMap->mLights[i];
+
+            std::cout << light->mName.C_Str() << std::endl;
+
+            Light tmpLight;
+
+                                    /**Position Vector*/
+            VECTOR3D Pos;           Pos.x = (light->mPosition.x);
+                                    Pos.y = (light->mPosition.y);
+                                    Pos.z = (light->mPosition.z);
+/*
+                                    std::cout << light->mPosition.x <<std:: endl;
+                                    std::cout << light->mPosition.y << std::endl;
+                                    std::cout << light->mPosition.z << std::endl;
+*/
+                                    /**Direction Vector*/
+            VECTOR3D Dir;           Dir.x = (light->mDirection.x);
+                                    Dir.y = (light->mDirection.y);
+                                    Dir.z = (light->mDirection.z);
+
+                                    /**Color Vector*/
+            VECTOR3D Col;           Col.x = (light->mColorDiffuse.r);
+                                    Col.x = (light->mColorDiffuse.g);
+                                    Col.x = (light->mColorDiffuse.b);
+
+            tmpLight.Position = Pos;
+            tmpLight.Direction = Dir;
+            tmpLight.Color = Col;
+
+            Lights.push_back(tmpLight);
+
+
+        }
+    }
+}
 Mesh EMap::ParseMesh(aiMesh* mesh, const aiScene* eMap)
 {
     Mesh tmpMesh;
 
-    std::cout << std::endl << "Mesh" << std::endl << "====================================" << std::endl;
+    tmpMesh.Name = std::string(mesh->mName.C_Str());
 
-    std::cout << "Number of Vertices: " << mesh->mNumVertices << std::endl;
+
 
     for(int nVert = 0 ; nVert < mesh->mNumVertices; nVert++)
     {
@@ -103,6 +150,7 @@ Mesh EMap::ParseMesh(aiMesh* mesh, const aiScene* eMap)
             tmpMesh.vBitangents.push_back(tmpvec3);
 
         }
+
     }
     for(UINT i = 0; i < mesh->mNumFaces; i++)
     {
@@ -111,7 +159,7 @@ Mesh EMap::ParseMesh(aiMesh* mesh, const aiScene* eMap)
         for(UINT j = 0; j < face.mNumIndices; j++)
             tmpMesh.Indices.push_back(face.mIndices[j]);
     }
-    if(mesh->mMaterialIndex >= 0)
+    if(eMap->mMaterials[0] != NULL)
     {
         aiMaterial* material = eMap->mMaterials[mesh->mMaterialIndex];
         std::vector<TEXTURE> diffuseMaps = this->loadMaterialTextures(material,
@@ -121,8 +169,6 @@ Mesh EMap::ParseMesh(aiMesh* mesh, const aiScene* eMap)
                                             aiTextureType_SPECULAR, "texture_specular");
         tmpMesh.Textures.insert(tmpMesh.Textures.end(), specularMaps.begin(), specularMaps.end());
     }
-
-
 
     return tmpMesh;
 }
@@ -151,9 +197,7 @@ std::vector<TEXTURE> EMap::loadMaterialTextures(aiMaterial* mat, aiTextureType t
         mat->GetTexture(type, i, &str);
         TEXTURE texture;
         texture.TYPE = typeName;
-        std::cout << "Texture Type: " << texture.TYPE << std::endl;
         texture.PATH = str.C_Str();
-        std::cout << "Texture Name: " << texture.PATH << std::endl;
         textures.push_back(texture);
     }
     return textures;

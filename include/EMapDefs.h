@@ -48,7 +48,7 @@ typedef enum ENTITIES
 
 };
 
-typedef enum LIGHT
+typedef enum eLIGHT
 {
 
      POINT,
@@ -58,9 +58,24 @@ typedef enum LIGHT
 
 struct VECTOR3D
 {
+    double x;
+    double y;
+    double z;
+};
+
+struct VECTOR4D
+{
     int x;
     int y;
     int z;
+    int w;
+};
+
+struct LIGHT
+{
+    VECTOR3D l_position;
+    VECTOR3D l_direction;
+    VECTOR3D l_color;
 };
 
 struct VECTOR2D

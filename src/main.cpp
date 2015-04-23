@@ -30,6 +30,33 @@ using namespace std;
 int main(int argc, char* argv[])
 {
     //std::string filename(argv[1]);
-    EMap eMap("fy_snow.dae");
+    EMap eMap("mapa counter.dae");
+
+    cout << "Epsilon Map Compiler" << endl;
+
+    for(int i = 0 ; i < eMap.Meshes.size() ; i++)
+    {
+        std::cout << "Mesh: " <<eMap.Meshes[i].Name<< std::endl;
+
+        std::cout << "Number of Vertices: " << eMap.Meshes[i].vPosition.size() << std::endl<< std::endl;
+        std::cout << "\tMesh textures: "<< std::endl;
+        for(int j = 0 ; j < eMap.Meshes[i].Textures.size() ; j++)
+        {
+            std::cout << "\tTexture Type: " << eMap.Meshes[i].Textures[j].TYPE << std::endl;
+            std::cout << "\tTexture Name: " << eMap.Meshes[i].Textures[j].PATH << std::endl << std::endl;
+        }
+        std::cout << "======================================= "<< std::endl;
+    }
+    cout << eMap.Lights.size() << endl;
+    for(int i = 0 ; i < eMap.Lights.size() ; i++)
+    {
+        cout << "Light #" << i << endl;
+        cout << "Light Position: " << "Vector3D: (" << eMap.Lights[i].Position.x << " " <<eMap.Lights[i].Position.y<< " " <<eMap.Lights[i].Position.z<<  " )" << endl;
+        cout << "Light Direction: " << "Vector3D: (" << eMap.Lights[i].Direction.x << " " <<eMap.Lights[i].Direction.y<< " " <<eMap.Lights[i].Direction.z<<  " )" << endl;
+        cout << "Light Color: " << endl << "(" << eMap.Lights[i].Color.x << " "  << eMap.Lights[i].Color.y<< " " <<eMap.Lights[i].Color.z <<  " )" << endl;
+
+        std::cout << "======================================= "<< std::endl;
+    }
+
     return 0;
 }

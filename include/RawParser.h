@@ -51,20 +51,7 @@ public:
     std::string eName;
 };
 
-class Light{
 
-public:
-    Light();
-    ~Light(){}
-
-public:
-
-    UINT lType;
-
-    VECTOR3D lPosition;
-    VECTOR3D lDirection;
-
-};
 
 class Mesh{
 
@@ -79,7 +66,21 @@ public:
 
     std::vector<TEXTURE> Textures;
 
+    std::string Name;
 private:
+
+};
+
+class Light{
+
+public:
+    Light(){}
+    ~Light(){}
+
+public:
+    VECTOR3D Position;
+    VECTOR3D Direction;
+    VECTOR3D Color;
 
 };
 
@@ -90,8 +91,11 @@ public:
     virtual ~EMap(){}
 
     UINT eMapNumMeshes;
-private:
+
     std::vector<Mesh> Meshes;
+    std::vector<Light> Lights;
+private:
+    void getLights(const aiScene* eMap);
     void processNode(aiNode* node, const aiScene* scene);
     Mesh ParseMesh(aiMesh* mesh, const aiScene* eMap);
     std::vector<TEXTURE> loadMaterialTextures(aiMaterial* mat, aiTextureType type, std::string typeName);

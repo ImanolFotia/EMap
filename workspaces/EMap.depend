@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1429422869 source:c:\users\psycho\documents\emap\src\rawparser.cpp
+1429820519 source:c:\users\psycho\documents\emap\src\rawparser.cpp
 	<RawParser.h>
 
-1429419421 c:\users\psycho\documents\emap\include\rawparser.h
+1429823847 c:\users\psycho\documents\emap\include\rawparser.h
 	<vector>
 	<string>
 	<iostream>
@@ -131,9 +131,428 @@
 1429223507 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-sdk\include\assimp\postprocess.h
 	"types.h"
 
-1429419051 c:\users\psycho\documents\emap\include\emapdefs.h
+1429820737 c:\users\psycho\documents\emap\include\emapdefs.h
 
-1429423009 source:c:\users\psycho\documents\emap\src\main.cpp
+1429820648 source:c:\users\psycho\documents\emap\src\main.cpp
 	<iostream>
 	<RawParser.h>
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\cimport.h
+	"types.h"
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\types.h
+	<sys/types.h>
+	<memory.h>
+	<math.h>
+	<stddef.h>
+	"defs.h"
+	"vector3.h"
+	"vector2.h"
+	"color4.h"
+	"matrix3x3.h"
+	"matrix4x4.h"
+	"quaternion.h"
+	<new>
+	<string>
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+	"vector2.inl"
+	"vector3.inl"
+	"color4.inl"
+	"quaternion.inl"
+	"matrix3x3.inl"
+	"matrix4x4.inl"
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\defs.h
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\vector3.h
+	<math.h>
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\compiler\pushpack1.h
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\compiler\poppack1.h
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\vector2.h
+	<math.h>
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\color4.h
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\matrix3x3.h
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\matrix4x4.h
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\quaternion.h
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\vector2.inl
+	"vector2.h"
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\vector3.inl
+	"vector3.h"
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\color4.inl
+	"color4.h"
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\quaternion.inl
+	"quaternion.h"
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\matrix3x3.inl
+	"matrix3x3.h"
+	"matrix4x4.h"
+	<algorithm>
+	<limits>
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\matrix4x4.inl
+	"matrix4x4.h"
+	"matrix3x3.h"
+	"quaternion.h"
+	<algorithm>
+	<limits>
+	<math.h>
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\scene.h
+	"types.h"
+	"texture.h"
+	"mesh.h"
+	"light.h"
+	"camera.h"
+	"material.h"
+	"anim.h"
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\texture.h
+	"types.h"
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\mesh.h
+	"types.h"
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\light.h
+	"types.h"
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\camera.h
+	"types.h"
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\material.h
+	"types.h"
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+	"material.inl"
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\material.inl
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\anim.h
+	"types.h"
+	"quaternion.h"
+
+1429223515 c:\users\psycho\documents\epsilon\thirdparty\assimp--3.0.1270-source-only\include\assimp\postprocess.h
+	"types.h"
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\cimport.h
+	"types.h"
+
+1429426062 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\types.h
+	<sys/types.h>
+	<memory.h>
+	<math.h>
+	<stddef.h>
+	<string.h>
+	<limits.h>
+	"defs.h"
+	"vector3.h"
+	"vector2.h"
+	"color4.h"
+	"matrix3x3.h"
+	"matrix4x4.h"
+	"quaternion.h"
+	<cstring>
+	<new>
+	<string>
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+	"vector2.inl"
+	"vector3.inl"
+	"color4.inl"
+	"quaternion.inl"
+	"matrix3x3.inl"
+	"matrix4x4.inl"
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\defs.h
+
+1429426062 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\vector3.h
+	<cmath>
+	<math.h>
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429426062 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\compiler\pushpack1.h
+
+1429426062 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\compiler\poppack1.h
+
+1429426062 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\vector2.h
+	<cmath>
+	<math.h>
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\color4.h
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\matrix3x3.h
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\matrix4x4.h
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\quaternion.h
+
+1429426062 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\vector2.inl
+	"vector2.h"
+	<cmath>
+
+1429426062 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\vector3.inl
+	"vector3.h"
+	<cmath>
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\color4.inl
+	"color4.h"
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\quaternion.inl
+	"quaternion.h"
+	<cmath>
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\matrix3x3.inl
+	"matrix3x3.h"
+	"matrix4x4.h"
+	<algorithm>
+	<cmath>
+	<limits>
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\matrix4x4.inl
+	"matrix4x4.h"
+	"matrix3x3.h"
+	"quaternion.h"
+	<algorithm>
+	<limits>
+	<cmath>
+	<math.h>
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\scene.h
+	"types.h"
+	"texture.h"
+	"mesh.h"
+	"light.h"
+	"camera.h"
+	"material.h"
+	"anim.h"
+	"metadata.h"
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\texture.h
+	"types.h"
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\mesh.h
+	"types.h"
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\light.h
+	"types.h"
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\camera.h
+	"types.h"
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\material.h
+	"types.h"
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+	"material.inl"
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\material.inl
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\anim.h
+	"types.h"
+	"quaternion.h"
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\metadata.h
+	<assert.h>
+	"Compiler/pstdint.h"
+	<stdint.h>
+	<string>
+
+1429426062 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\compiler\pstdint.h
+	<stddef.h>
+	<limits.h>
+	<signal.h>
+	<stdint.h>
+	<wchar.h>
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\postprocess.h
+	"types.h"
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\importer.hpp
+	"types.h"
+	"config.h"
+
+1429426061 c:\users\psycho\documents\emap\depend\assimp-3.1.1-win-binaries\include\assimp\config.h
+
+1429637773 c:\users\psycho\documents\emap\depend\assimp\include\assimp\cimport.h
+	"types.h"
+
+1429637775 c:\users\psycho\documents\emap\depend\assimp\include\assimp\types.h
+	<sys/types.h>
+	<memory.h>
+	<math.h>
+	<stddef.h>
+	<string.h>
+	<limits.h>
+	"defs.h"
+	"vector3.h"
+	"vector2.h"
+	"color4.h"
+	"matrix3x3.h"
+	"matrix4x4.h"
+	"quaternion.h"
+	<cstring>
+	<new>
+	<string>
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+	"vector2.inl"
+	"vector3.inl"
+	"color4.inl"
+	"quaternion.inl"
+	"matrix3x3.inl"
+	"matrix4x4.inl"
+
+1429637773 c:\users\psycho\documents\emap\depend\assimp\include\assimp\defs.h
+
+1429637775 c:\users\psycho\documents\emap\depend\assimp\include\assimp\vector3.h
+	<cmath>
+	<math.h>
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429637777 c:\users\psycho\documents\emap\depend\assimp\include\assimp\compiler\pushpack1.h
+
+1429637777 c:\users\psycho\documents\emap\depend\assimp\include\assimp\compiler\poppack1.h
+
+1429637775 c:\users\psycho\documents\emap\depend\assimp\include\assimp\vector2.h
+	<cmath>
+	<math.h>
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429637773 c:\users\psycho\documents\emap\depend\assimp\include\assimp\color4.h
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429637774 c:\users\psycho\documents\emap\depend\assimp\include\assimp\matrix3x3.h
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429637774 c:\users\psycho\documents\emap\depend\assimp\include\assimp\matrix4x4.h
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429637775 c:\users\psycho\documents\emap\depend\assimp\include\assimp\quaternion.h
+
+1429637775 c:\users\psycho\documents\emap\depend\assimp\include\assimp\vector2.inl
+	"vector2.h"
+	<cmath>
+
+1429637775 c:\users\psycho\documents\emap\depend\assimp\include\assimp\vector3.inl
+	"vector3.h"
+	<cmath>
+
+1429637773 c:\users\psycho\documents\emap\depend\assimp\include\assimp\color4.inl
+	"color4.h"
+
+1429637775 c:\users\psycho\documents\emap\depend\assimp\include\assimp\quaternion.inl
+	"quaternion.h"
+	<cmath>
+
+1429637774 c:\users\psycho\documents\emap\depend\assimp\include\assimp\matrix3x3.inl
+	"matrix3x3.h"
+	"matrix4x4.h"
+	<algorithm>
+	<cmath>
+	<limits>
+
+1429637774 c:\users\psycho\documents\emap\depend\assimp\include\assimp\matrix4x4.inl
+	"matrix4x4.h"
+	"matrix3x3.h"
+	"quaternion.h"
+	<algorithm>
+	<limits>
+	<cmath>
+	<math.h>
+
+1429637775 c:\users\psycho\documents\emap\depend\assimp\include\assimp\scene.h
+	"types.h"
+	"texture.h"
+	"mesh.h"
+	"light.h"
+	"camera.h"
+	"material.h"
+	"anim.h"
+	"metadata.h"
+
+1429637775 c:\users\psycho\documents\emap\depend\assimp\include\assimp\texture.h
+	"types.h"
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1429637774 c:\users\psycho\documents\emap\depend\assimp\include\assimp\mesh.h
+	"types.h"
+
+1429637773 c:\users\psycho\documents\emap\depend\assimp\include\assimp\light.h
+	"types.h"
+
+1429637773 c:\users\psycho\documents\emap\depend\assimp\include\assimp\camera.h
+	"types.h"
+
+1429637773 c:\users\psycho\documents\emap\depend\assimp\include\assimp\material.h
+	"types.h"
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+	"material.inl"
+
+1429637773 c:\users\psycho\documents\emap\depend\assimp\include\assimp\material.inl
+
+1429637773 c:\users\psycho\documents\emap\depend\assimp\include\assimp\anim.h
+	"types.h"
+	"quaternion.h"
+
+1429637775 c:\users\psycho\documents\emap\depend\assimp\include\assimp\metadata.h
+	<assert.h>
+	"Compiler/pstdint.h"
+	<stdint.h>
+	<string>
+
+1429637777 c:\users\psycho\documents\emap\depend\assimp\include\assimp\compiler\pstdint.h
+	<stddef.h>
+	<limits.h>
+	<signal.h>
+	<stdint.h>
+	<wchar.h>
+
+1429637775 c:\users\psycho\documents\emap\depend\assimp\include\assimp\postprocess.h
+	"types.h"
+
+1429813104 source:c:\users\psycho\documents\emap\src\mapcompiler.cpp
+	<EMapbin.h>
+
+1429813222 c:\users\psycho\documents\emap\include\emapbin.h
 
